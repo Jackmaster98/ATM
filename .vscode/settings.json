@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "src/code/GUI",
+        "src/code/Database",
+        "src/code/Business_logic"
+    ]
+}
