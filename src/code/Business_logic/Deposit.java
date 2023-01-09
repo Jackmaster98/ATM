@@ -32,10 +32,13 @@ public class Deposit extends Transaction
       // check whether user entered a deposit amount or canceled
       if ( amount != CANCELED )
       {
+
+         Euro newamount = new Euro(amount);
+
          // request deposit envelope containing specified amount
          screen.displayMessage( 
             "\nPlease insert a deposit envelope containing " );
-         screen.displayDollarAmount( amount );
+         screen.displayDollarAmount( newamount );
          screen.displayMessageLine( "." );
 
          // receive deposit envelope
@@ -50,7 +53,7 @@ public class Deposit extends Transaction
                "enclosed cash and your checks clear." );
             
             // credit account to reflect the deposit
-            bankDatabase.credit( getAccountNumber(), amount ); 
+            bankDatabase.credit( getAccountNumber(), newamount ); 
          } // end if
          else // deposit envelope not received
          {
