@@ -1,5 +1,5 @@
-// Account.java
-// Represents a bank account
+package Business_logic;
+
 
 public class Account 
 {
